@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
     <title>Portfolio</title>
 </head>
 <body>
@@ -21,40 +24,116 @@
             <div id="nav-menu" class="nav__menu" >
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a class="nav__link">
+                        <a href="#home" class="nav__link">
                             <i class="uil uil-estate nav__icon"></i> Home
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> Sobre
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link">
+                        <a href="#skills" class="nav__link">
                             <i class="uil uil-file-info-alt nav__icon"></i> Skills
                         </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link">
-                            <i class="uil uil-file-info-alt nav__icon"></i> Portfolio
+                            <i class="uil uil-file-info-alt nav__icon"></i> Portfólio
                         </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link">
-                            <i class="uil uil-message"></i> Contact
+                            <i class="uil uil-message"></i> Contato
                         </a>
                     </li>
                 </ul>
                 <i class="uil uil-multiply nav__close" id="nav-close"></i>
             </div>
             <div class="nav__btns" >
-                <div id="nav-toggle" class="nav__toggle" ><i class="uil uil-apps"></i></div>
+                <div id="nav-toggle" class="nav__toggle" >
+                    <i class="uil uil-apps"></i>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
-
+    <main class="container px-3">
+        <section id="home" class="pt-3">
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-2">
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
+            
+                                <image class="home__blob-img" href="images/profile.png"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-1">
+                    <p class="section__subtitle">Olá,</p>
+                    <p class="section__subtitle">Me chamo <span class="purple">Guilherme</span>,</p>
+                    <p class="section__title typing-animation">Web Developer</p>
+                    <p class="description">Bem-vindo(a) ao meu portfólio! Aqui você encontrará meus projetos mais recentes, além de algumas informações sobre mim.</p>
+                    <button class="btn-outline-purple"><span class="btn-background"></span> Entre em contato</button>
+                </div> 
+            </div>
+        </section>
+        <section id="about" >
+            <p class="section__title">Sobre mim</p>
+            <div class="row">
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <img class="img-fluid w-75 rounded" src="/images/profile.png">
+                </div>
+                <div class="col-12 col-md-8">
+                    <p>
+                        Eai, me chamo Guilherme Yudi Shibuya, tenho 21 anos e faço Ciência da 
+                        Computação na UTFPR - Medianera. Sou aspirante a Web Developer e estou 
+                        sempre procurando aprimorar minhas habilidades.
+                    </p>
+                    <p>
+                        Ao longo do curso, tive a oportunidade de desenvolver alguns projetos 
+                        para algumas matérias da faculdade, além de fazer projetos a parte afim
+                        de me desafiar para melhorar minhas habilidades e testar meus conhecimentos.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <p class="section__title">Skills</p>
+            <div class="skills-container fs-4">
+                <div class="icon-container">
+                    <i class="devicon-html5-plain"></i> HTML5
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-css3-plain"></i> CSS
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-javascript-plain"></i> Javascript
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-bootstrap-plain"></i> Bootstrap
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-nodejs-plain"></i> Node.js
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-nodejs-plain"></i> Express.js
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-mongodb-plain"></i> MongoDB
+                </div>
+                <div class="icon-container">
+                    <i class="devicon-react-original"></i> ReactJS
+                </div>
+            </div>
+        </section>
+        
     </main>
     <script src="script.js"></script>
 </body>
