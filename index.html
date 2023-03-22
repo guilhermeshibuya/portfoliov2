@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles.css">
-
+    <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    
+    <!-- DEV ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Portfolio</title>
 </head>
 <body>
     <header id="header" class="header">
-        <nav class="nav container">
+        <nav class="nav">
             <a href="#" class="nav__logo">Guilherme</a>
 
             <div id="nav-menu" class="nav__menu" >
@@ -58,7 +60,7 @@
             </div>
         </nav>
     </header>
-    <main class="container px-3">
+    <main>
         <section id="home" class="pt-3">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-2">
@@ -80,15 +82,20 @@
                     <p class="section__subtitle">Me chamo <span class="purple">Guilherme</span>,</p>
                     <p class="section__title typing-animation">Web Developer</p>
                     <p class="description">Bem-vindo(a) ao meu portfólio! Aqui você encontrará meus projetos mais recentes, além de algumas informações sobre mim.</p>
-                    <button class="btn-outline-purple"><span class="btn-background"></span> Entre em contato</button>
+                    <button type="button" class="btn-outline-purple">
+                        <span class="btn-background"></span>Entre em contato
+                    </button>
                 </div> 
             </div>
         </section>
         <section id="about" >
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#5a43cb" fill-opacity="1" d="M0,160L80,160C160,160,320,160,480,149.3C640,139,800,117,960,128C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg> -->
             <p class="section__title">Sobre mim</p>
             <div class="row">
-                <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <img class="img-fluid w-75 rounded" src="/images/profile.png">
+                <div class="col-12 col-md-4 d-flex justify-content-center my-4">
+                    <img class="img-fluid w-75 rounded" src="/images/profile2.png" alt="Profile picture">
                 </div>
                 <div class="col-12 col-md-8">
                     <p>
@@ -105,7 +112,11 @@
             </div>
         </section>
         <section id="skills">
-            <p class="section__title">Skills</p>
+            <p class="section__title">Habilidades</p>
+            <p>
+                Ao longo do tempo, adquiri várias habilidades por meios de estudos, 
+                experiências e projetos. Algumas das minhas habilidades incluem: 
+            </p>
             <div class="skills-container fs-4">
                 <div class="icon-container">
                     <i class="devicon-html5-plain"></i> HTML5
@@ -133,8 +144,111 @@
                 </div>
             </div>
         </section>
-        
+        <section id="portfolio">
+            <p class="section__title">Portfólio</p>
+            <p class="section__subtitle">Projetos pessoais</p>
+
+            <div class="portfolio__container">
+                <div class="card__container">
+                    <div class="card__img card-todo-list"></div>
+                    <div class="card__body">
+                        <div class="card__title">
+                            <p>Todo List</p>
+                        </div>
+                        <div class="card__description">
+                            Lista de tarefas a fazer, feita com MongoDB, Express.js, Node.js no backend
+                            e React, React Router Dom, React Bootstrap e Bootstrap no frontend. É possível
+                            adicionar, editar e deletar tarefas.
+                        </div>
+                        <div class="card__footer">
+                            <a 
+                                href="https://github.com/guilhermeshibuya/todo-list"
+                                class="btn-outline-purple"
+                            >
+                                <span class="btn-background"></span>Ver prévia
+                            </a>
+                            <a class="icon-link" href="https://github.com/guilhermeshibuya/todo-list">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+    
+                <div class="card__container">
+                    <div class="card__img card-employees"></div>
+                    <div class="card__body">
+                        <div class="card__title">
+                            <p>Employees</p>
+                        </div>
+                        <div class="card__description">
+                            Aplicativo web para gravar informações de funcionários. Foi feito utilizando
+                            a stack MERN: MongoDB para a base de dados, Express.js e Node.js para o servidor web
+                            e React no frontend. É possível inserir, editar e excluir informações dos funcionários.
+                        </div>
+                        <div class="card__footer">
+                            <a 
+                                href="https://github.com/guilhermeshibuya/employees"
+                                class="btn-outline-purple"
+                            >
+                                <span class="btn-background"></span>Ver prévia
+                            </a>
+                            <a class="icon-link" href="https://github.com/guilhermeshibuya/employees">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="card__container">
+                    <div class="card__img card-pokemon"></div>
+                    <div class="card__body">
+                        <div class="card__title">
+                            <p>Cartas pokémon</p>
+                        </div>
+                        <div class="card__description">
+                            Gerador de cartas Pokémon, foi desenvolvido em React e os dados são obtidos
+                            pela API PokéAPI. É possível procurar pelo nome ou número do Pokémon, também pode-se
+                            utilizar os botões para avançar ou voltar.
+                        </div>
+                        <div class="card__footer">
+                            <a 
+                                href="https://guilhermeshibuya.github.io/pokemon-react/"
+                                class="btn-outline-purple"
+                            >
+                                <span class="btn-background"></span>Ver prévia
+                            </a>
+                            <a class="icon-link" href="https://github.com/guilhermeshibuya/pokemon-react">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="card__container">
+                    <div class="card__img card-calculator"></div>
+                    <div class="card__body">
+                        <div class="card__title">
+                            <p>Calculadora</p>
+                        </div>
+                        <div class="card__description">
+                            Calculadora básica desenvolvida em HTML, CSS e Javascript.
+                        </div>
+                        <div class="card__footer">
+                            <a 
+                                href="https://guilhermeshibuya.github.io/simple-calculator/"
+                                class="btn-outline-purple"
+                            >
+                                <span class="btn-background"></span>Ver prévia
+                            </a>
+                            <a class="icon-link" href="https://github.com/guilhermeshibuya/simple-calculator">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
