@@ -7,10 +7,16 @@
     --first-color-alt: #5a43cb;
     --title-color: #242329;
     --text-color: #6d6a7c;
-    --text-color-light:#a19fad;
     --input-color: #f0eefc;
-    --body-color: #fbfbfe;
-    --container-color: #fff;
+    --dark: #100f10;
+    --dark-light: #1b1b1b;
+    --dark-lighter: #242424;
+    --lightiest: #f4f4f4;
+    --lighter: #aaaaaa;
+    --light: #727272;
+
+    /* TRANSITION */
+    --transition-dark: all .5s ease;
 
     /* Font */
     --body-font: 'Poppins', sans-serif;
@@ -54,12 +60,12 @@ html {
 
 /* GLOBAL */
 
-main {
-    margin: auto 1rem 50rem;
+.section-wrapper {
+    margin: 0 1rem;
 }
 
 @media screen and (min-width: 576px) {
-    main {
+    .section-wrapper {
         margin-left: 5rem;
     }
 }
@@ -67,8 +73,10 @@ main {
 body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    background-color: var(--lightiest);
     color: var(--text-color);
+    transition: var(--transition-dark);
+    margin-bottom: 10rem;
 }
 
 h1, h2, h3, h4 {
@@ -142,7 +150,6 @@ a {
 /* HEADER SCROLL */
 .nav-scroll {
     border-radius: .5rem .5rem 0 0;
-    background-color: var(--body-color);
     box-shadow: 0 -2px 3px rgba(0, 0, 0, .3);
 }
 
@@ -150,7 +157,7 @@ a {
 
 .header {
     width: 100%;
-    background-color: var(--body-color);
+    background-color: var(--lightiest);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -164,12 +171,13 @@ a {
     align-items: center;
 }
 
-.nav__logo, .nav__togle {
+.nav__logo, .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
+    transition: color .35s ease-in;
 }
 
-.nav__logo:hover {
+.nav__logo:hover, .nav__toggle:hover {
     color: var(--first-color);
 }
 
@@ -184,7 +192,7 @@ a {
         bottom: -100%;
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
+        background-color: var(--lightiest);
         box-shadow: 0 -2px 3px rgba(0, 0, 0, .3);
         border-radius: .5rem;
         transition: bottom .6s cubic-bezier(.26, .61, .83, .67);
@@ -204,6 +212,7 @@ a {
     font-size: var(--normal-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
+    transition: color .35s ease-in;
 }
 
 .nav__link:hover {
@@ -217,6 +226,7 @@ a {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--first-color);
+    transition: color .35s ease-in;
 }
 
 .nav__close:hover {
@@ -258,6 +268,15 @@ a {
     transform: translate(28px, 35px);
 }
 
+/* ABOUT */
+#about {
+    background-color: var(--first-color-alt);
+}
+
+#about, #about .section__title {
+    color: var(--lightiest);
+}
+
 /* SKILLS */
 .skills-container {
     display: flex;
@@ -289,6 +308,7 @@ a {
     flex-direction: column;
     border-radius: .5rem;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, .3);
+    background-color: var(--lightiest);
     width: 90%;
     height: 65vh;
     transition: all .35s ease-in;
@@ -368,12 +388,13 @@ a {
 
 .card__description {
     font-size: var(--small-font-size);
+    color: var(--text-color);
 }
 
 .card__footer {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .card__footer .btn-outline-purple {
@@ -407,3 +428,92 @@ a {
 .card-calculator {
     background-image: url(../images/calculator.svg);
 }
+
+/* DARK MODE BUTTON */
+
+/*  BTN DARK MODE WRAPPER */
+.btn-dark-mode__wrapper {
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+}
+/* BTN DARK MODE CHECKBOX */
+#btn-dark-mode {
+    position: absolute;
+    opacity: 0;
+}
+
+/* BTN DARK MODE ICONS AND BALL CONTAINER */
+.btn-dark-mode__icons-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 5rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    padding: .25rem; */
+    width: 3rem;
+    height: 1.5rem;
+    padding: .125rem;
+    border-radius: 1.5rem;
+    background-color: var(--dark-light);
+    cursor: pointer;
+    transition: var(--transition-dark);
+}
+
+/* BTN DARK MODE ICONS */
+.btn-dark-mode__icons-container > i {
+    /* font-size: 1.35rem; */
+    font-size: 1.15rem;
+    color: var(--lighter);
+    transition: var(--transition-dark);
+}
+
+/* BTN DARK MODE BALL */
+.ball {
+    position: absolute;
+    /* width: 2rem;
+    height: 2rem; */
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: var(--lightiest);
+    transform: translate(0);
+    transition: var(--transition-dark);
+}
+
+#btn-dark-mode:checked + label .ball {
+    /* transform: translateX(2.5rem); */
+    transform: translateX(1.5rem);
+}
+
+.dark-background {
+    background-color: var(--dark) !important;
+}
+
+.dark-light-background {
+    background-color: var(--dark-light) !important;
+}
+
+.lightiest-background {
+    background-color: var(--lightiest) !important; 
+}
+
+.dark-font {
+    color: var(--dark-light) !important;
+}
+
+.lightiest-font {
+    color: var(--lightiest);
+}
+
+.lighter-font {
+    color: var(--lighter) !important;
+    transition: color .35s ease-in;
+}
+
+.nav .lighter-font:hover{
+    color: var(--first-color) !important; 
+}
+

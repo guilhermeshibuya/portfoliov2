@@ -16,12 +16,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Portfolio</title>
+    
+    <title>Portfólio</title>
 </head>
-<body>
+<body id="body">
     <header id="header" class="header">
         <nav class="nav">
-            <a href="#" class="nav__logo">Guilherme</a>
+            <a href="#" id="nav-logo" class="nav__logo">Guilherme</a>
 
             <div id="nav-menu" class="nav__menu" >
                 <ul class="nav__list grid">
@@ -54,6 +55,14 @@
                 <i class="uil uil-multiply nav__close" id="nav-close"></i>
             </div>
             <div class="nav__btns" >
+                <div class="btn-dark-mode__wrapper">
+                    <input type="checkbox" name="btn-dark-mode" id="btn-dark-mode">
+                    <label for="btn-dark-mode" id="btn-container" class="btn-dark-mode__icons-container">
+                        <i id="sun" class="uil uil-sun"></i>
+                        <i id="moon" class="uil uil-moon"></i>
+                        <div id="ball" class="ball"></div>
+                    </label>
+                </div>
                 <div id="nav-toggle" class="nav__toggle" >
                     <i class="uil uil-apps"></i>
                 </div>
@@ -62,191 +71,204 @@
     </header>
     <main>
         <section id="home" class="pt-3">
-            <div class="row">
-                <div class="col-12 col-md-6 order-md-2">
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
-            
-                                <image class="home__blob-img" href="images/profile.png"/>
-                            </g>
-                        </svg>
+            <div class="section-wrapper">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-md-2">
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M61.7,-39.3C69.5,-22.1,58.2,2.5,44.7,26.6C31.2,50.6,15.6,74.2,-4.8,77C-25.2,79.7,-50.4,61.7,-64.4,37.2C-78.5,12.8,-81.5,-18,-68.9,-38C-56.4,-57.9,-28.2,-67,-0.6,-66.7C26.9,-66.3,53.9,-56.5,61.7,-39.3Z" transform="translate(100 100)" />
+                
+                                    <image class="home__blob-img" href="images/profile.png"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-1">
+                        <p class="section__subtitle">Olá,</p>
+                        <p class="section__subtitle">Me chamo <span class="purple">Guilherme</span>,</p>
+                        <p class="section__title typing-animation">Web Developer</p>
+                        <p class="description">Bem-vindo(a) ao meu portfólio! Aqui você encontrará meus projetos mais recentes, além de algumas informações sobre mim.</p>
+                        <button type="button" class="btn-outline-purple">
+                            <span class="btn-background"></span>Entre em contato
+                        </button>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5a43cb" fill-opacity="1" d="M0,160L80,160C160,160,320,160,480,149.3C640,139,800,117,960,128C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+        <section id="about" >
+            <div class="section-wrapper">
+                <p class="section__title">Sobre mim</p>
+                <div class="row d-flex align-items-center justify-content-center justify-content-md-between">
+                    <div class="col-8 col-md-4 d-flex justify-content-center my-4">
+                        <img class="img-fluid w-75 rounded" src="/images/profile2.png" alt="Profile picture">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>
+                            Eai, me chamo Guilherme Yudi Shibuya, tenho 21 anos e faço Ciência da 
+                            Computação na UTFPR - Medianera. Sou aspirante a Web Developer e estou 
+                            sempre procurando aprimorar minhas habilidades.
+                        </p>
+                        <p>
+                            Ao longo do curso, tive a oportunidade de desenvolver alguns projetos 
+                            para algumas matérias da faculdade, além de fazer projetos a parte afim
+                            de me desafiar para melhorar minhas habilidades e testar meus conhecimentos.
+                        </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 order-md-1">
-                    <p class="section__subtitle">Olá,</p>
-                    <p class="section__subtitle">Me chamo <span class="purple">Guilherme</span>,</p>
-                    <p class="section__title typing-animation">Web Developer</p>
-                    <p class="description">Bem-vindo(a) ao meu portfólio! Aqui você encontrará meus projetos mais recentes, além de algumas informações sobre mim.</p>
-                    <button type="button" class="btn-outline-purple">
-                        <span class="btn-background"></span>Entre em contato
-                    </button>
-                </div> 
             </div>
         </section>
-        <section id="about" >
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#5a43cb" fill-opacity="1" d="M0,160L80,160C160,160,320,160,480,149.3C640,139,800,117,960,128C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-            </svg> -->
-            <p class="section__title">Sobre mim</p>
-            <div class="row">
-                <div class="col-12 col-md-4 d-flex justify-content-center my-4">
-                    <img class="img-fluid w-75 rounded" src="/images/profile2.png" alt="Profile picture">
-                </div>
-                <div class="col-12 col-md-8">
-                    <p>
-                        Eai, me chamo Guilherme Yudi Shibuya, tenho 21 anos e faço Ciência da 
-                        Computação na UTFPR - Medianera. Sou aspirante a Web Developer e estou 
-                        sempre procurando aprimorar minhas habilidades.
-                    </p>
-                    <p>
-                        Ao longo do curso, tive a oportunidade de desenvolver alguns projetos 
-                        para algumas matérias da faculdade, além de fazer projetos a parte afim
-                        de me desafiar para melhorar minhas habilidades e testar meus conhecimentos.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5a43cb" fill-opacity="1" d="M0,128L80,133.3C160,139,320,149,480,144C640,139,800,117,960,96C1120,75,1280,53,1360,42.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
         <section id="skills">
-            <p class="section__title">Habilidades</p>
-            <p>
-                Ao longo do tempo, adquiri várias habilidades por meios de estudos, 
-                experiências e projetos. Algumas das minhas habilidades incluem: 
-            </p>
-            <div class="skills-container fs-4">
-                <div class="icon-container">
-                    <i class="devicon-html5-plain"></i> HTML5
+            <div class="section-wrapper">
+                <p class="section__title">Habilidades</p>
+                <p>
+                    Ao longo do tempo, adquiri várias habilidades por meios de estudos, 
+                    experiências e projetos. Algumas das minhas habilidades incluem: 
+                </p>
+                <div class="skills-container fs-4">
+                    <div class="icon-container">
+                        <i class="devicon-html5-plain"></i> HTML5
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-css3-plain"></i> CSS
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-javascript-plain"></i> Javascript
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-bootstrap-plain"></i> Bootstrap
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-nodejs-plain"></i> Node.js
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-express-original"></i> Express.js
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-mongodb-plain"></i> MongoDB
+                    </div>
+                    <div class="icon-container">
+                        <i class="devicon-react-original"></i> ReactJS
+                    </div>
                 </div>
-                <div class="icon-container">
-                    <i class="devicon-css3-plain"></i> CSS
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-javascript-plain"></i> Javascript
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-bootstrap-plain"></i> Bootstrap
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-nodejs-plain"></i> Node.js
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-nodejs-plain"></i> Express.js
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-mongodb-plain"></i> MongoDB
-                </div>
-                <div class="icon-container">
-                    <i class="devicon-react-original"></i> ReactJS
-                </div>
-            </div>
+            </div>   
         </section>
         <section id="portfolio">
-            <p class="section__title">Portfólio</p>
-            <p class="section__subtitle">Projetos pessoais</p>
-
-            <div class="portfolio__container">
-                <div class="card__container">
-                    <div class="card__img card-todo-list"></div>
-                    <div class="card__body">
-                        <div class="card__title">
-                            <p>Todo List</p>
-                        </div>
-                        <div class="card__description">
-                            Lista de tarefas a fazer, feita com MongoDB, Express.js, Node.js no backend
-                            e React, React Router Dom, React Bootstrap e Bootstrap no frontend. É possível
-                            adicionar, editar e deletar tarefas.
-                        </div>
-                        <div class="card__footer">
-                            <a 
-                                href="https://github.com/guilhermeshibuya/todo-list"
-                                class="btn-outline-purple"
-                            >
-                                <span class="btn-background"></span>Ver prévia
-                            </a>
-                            <a class="icon-link" href="https://github.com/guilhermeshibuya/todo-list">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-                    </div>    
-                </div>
+            <div class="section-wrapper">
+                <p class="section__title">Portfólio</p>
+                <p class="section__subtitle">Projetos pessoais</p>
     
-                <div class="card__container">
-                    <div class="card__img card-employees"></div>
-                    <div class="card__body">
-                        <div class="card__title">
-                            <p>Employees</p>
-                        </div>
-                        <div class="card__description">
-                            Aplicativo web para gravar informações de funcionários. Foi feito utilizando
-                            a stack MERN: MongoDB para a base de dados, Express.js e Node.js para o servidor web
-                            e React no frontend. É possível inserir, editar e excluir informações dos funcionários.
-                        </div>
-                        <div class="card__footer">
-                            <a 
-                                href="https://github.com/guilhermeshibuya/employees"
-                                class="btn-outline-purple"
-                            >
-                                <span class="btn-background"></span>Ver prévia
-                            </a>
-                            <a class="icon-link" href="https://github.com/guilhermeshibuya/employees">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-                    </div>    
+                <div class="portfolio__container">
+                    <div class="card__container">
+                        <div class="card__img card-todo-list"></div>
+                        <div class="card__body">
+                            <div class="card__title">
+                                <p>Todo List</p>
+                            </div>
+                            <div class="card__description">
+                                Lista de tarefas a fazer, feita com MongoDB, Express.js e Node.js no backend
+                                e React, React Router Dom, React Bootstrap e Bootstrap no frontend. É possível
+                                adicionar, editar e deletar tarefas.
+                            </div>
+                            <div class="card__footer">
+                                <a 
+                                    href="https://github.com/guilhermeshibuya/todo-list"
+                                    class="btn-outline-purple"
+                                >
+                                    <span class="btn-background"></span>Ver prévia
+                                </a>
+                                <a class="icon-link" href="https://github.com/guilhermeshibuya/todo-list">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+        
+                    <div class="card__container">
+                        <div class="card__img card-employees"></div>
+                        <div class="card__body">
+                            <div class="card__title">
+                                <p>Employees</p>
+                            </div>
+                            <div class="card__description">
+                                Aplicativo web para gravar informações de funcionários. Foi feito utilizando
+                                a stack MERN: MongoDB para a base de dados, Express.js e Node.js para o servidor web
+                                e React no frontend. É possível inserir, editar e excluir informações dos funcionários.
+                            </div>
+                            <div class="card__footer">
+                                <a 
+                                    href="https://github.com/guilhermeshibuya/employees"
+                                    class="btn-outline-purple"
+                                >
+                                    <span class="btn-background"></span>Ver prévia
+                                </a>
+                                <a class="icon-link" href="https://github.com/guilhermeshibuya/employees">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+    
+                    <div class="card__container">
+                        <div class="card__img card-pokemon"></div>
+                        <div class="card__body">
+                            <div class="card__title">
+                                <p>Cartas pokémon</p>
+                            </div>
+                            <div class="card__description">
+                                Gerador de cartas Pokémon, foi desenvolvido em React e os dados são obtidos
+                                pela API PokéAPI. É possível procurar pelo nome ou número do Pokémon, também pode-se
+                                utilizar os botões para avançar ou voltar.
+                            </div>
+                            <div class="card__footer">
+                                <a 
+                                    href="https://guilhermeshibuya.github.io/pokemon-react/"
+                                    class="btn-outline-purple"
+                                >
+                                    <span class="btn-background"></span>Ver prévia
+                                </a>
+                                <a class="icon-link" href="https://github.com/guilhermeshibuya/pokemon-react">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+    
+                    <div class="card__container">
+                        <div class="card__img card-calculator"></div>
+                        <div class="card__body">
+                            <div class="card__title">
+                                <p>Calculadora</p>
+                            </div>
+                            <div class="card__description">
+                                Calculadora básica desenvolvida em HTML, CSS e Javascript. É possível somar,
+                                subtrair, dividir e multiplicar, também tem a função "all clear" para limpar
+                                a tela.
+                            </div>
+                            <div class="card__footer">
+                                <a 
+                                    href="https://guilhermeshibuya.github.io/simple-calculator/"
+                                    class="btn-outline-purple"
+                                >
+                                    <span class="btn-background"></span>Ver prévia
+                                </a>
+                                <a class="icon-link" href="https://github.com/guilhermeshibuya/simple-calculator">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
                 </div>
-
-                <div class="card__container">
-                    <div class="card__img card-pokemon"></div>
-                    <div class="card__body">
-                        <div class="card__title">
-                            <p>Cartas pokémon</p>
-                        </div>
-                        <div class="card__description">
-                            Gerador de cartas Pokémon, foi desenvolvido em React e os dados são obtidos
-                            pela API PokéAPI. É possível procurar pelo nome ou número do Pokémon, também pode-se
-                            utilizar os botões para avançar ou voltar.
-                        </div>
-                        <div class="card__footer">
-                            <a 
-                                href="https://guilhermeshibuya.github.io/pokemon-react/"
-                                class="btn-outline-purple"
-                            >
-                                <span class="btn-background"></span>Ver prévia
-                            </a>
-                            <a class="icon-link" href="https://github.com/guilhermeshibuya/pokemon-react">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-                    </div>    
-                </div>
-
-                <div class="card__container">
-                    <div class="card__img card-calculator"></div>
-                    <div class="card__body">
-                        <div class="card__title">
-                            <p>Calculadora</p>
-                        </div>
-                        <div class="card__description">
-                            Calculadora básica desenvolvida em HTML, CSS e Javascript.
-                        </div>
-                        <div class="card__footer">
-                            <a 
-                                href="https://guilhermeshibuya.github.io/simple-calculator/"
-                                class="btn-outline-purple"
-                            >
-                                <span class="btn-background"></span>Ver prévia
-                            </a>
-                            <a class="icon-link" href="https://github.com/guilhermeshibuya/simple-calculator">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-                    </div>    
-                </div>
-            </div>
+            </div>  
         </section>
     </main>
     <script src="js/script.js"></script>
