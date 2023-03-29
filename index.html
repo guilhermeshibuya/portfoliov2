@@ -42,12 +42,12 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link">
+                        <a href="#portfolio" class="nav__link">
                             <i class="uil uil-file-info-alt nav__icon"></i> Portfólio
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link">
+                        <a href="#contact" class="nav__link">
                             <i class="uil uil-message"></i> Contato
                         </a>
                     </li>
@@ -127,7 +127,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#5a43cb" fill-opacity="1" d="M0,128L80,133.3C160,139,320,149,480,144C640,139,800,117,960,96C1120,75,1280,53,1360,42.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
-        <section id="skills">
+        <section class="mt-5" id="skills">
             <div class="section-wrapper">
                 <p class="section__title">Habilidades</p>
                 <p>
@@ -162,7 +162,7 @@
                 </div>
             </div>   
         </section>
-        <section id="portfolio">
+        <section class="mt-5" id="portfolio">
             <div class="section-wrapper">
                 <p class="section__title">Portfólio</p>
                 <p class="section__subtitle">Projetos pessoais</p>
@@ -269,6 +269,117 @@
                     </div>
                 </div>
             </div>  
+        </section>
+        <section class="mt-5" id="contact">
+            <div class="section-wrapper">
+                <p class="section__title">Manda um salve!</p>
+                <div class="row contact__container">
+                    <!-- <div id="contact-form" class="col-md-7 order-md-2 p-3 contact-form__container">  -->
+                        <form id="contact-form" class="col-md-7 order-md-2 p-3 contact-form__container" action="">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label class="form-label" for="form-name">
+                                        Nome
+                                        <input 
+                                            type="text" 
+                                            id="form-name"
+                                            class="input input-control"
+                                            placeholder="Primeiro nome"
+                                            aria-label="Primeiro nome"
+                                            required
+                                        >
+                                    </label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="form-label" for="form-last-name">
+                                        Sobrenome
+                                        <input 
+                                            type="text" 
+                                            id="form-last-name"
+                                            class="input input-control"
+                                            placeholder="Último nome"
+                                            aria-label="Último nome"
+                                            required
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label class="form-label" for="form-email">
+                                        Email
+                                        <input 
+                                            type="email" 
+                                            id="form-email"
+                                            class="input input-control"
+                                            placeholder="exemplo@email.com"
+                                            aria-label="Email"
+                                            required
+                                        >
+                                    </label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="form-label" for="form-phone">
+                                        Telefone
+                                        <input 
+                                            type="tel" 
+                                            id="form-phone"
+                                            class="input input-control"
+                                            placeholder="+55 (99) 99999-9999"
+                                            aria-label="Telefone"
+                                            required
+                                        >
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="form-text">
+                                    Mensagem
+                                    <textarea 
+                                        id="form-text" 
+                                        class="input input-control"
+                                        placeholder="Deixe uma mensagem"
+                                        aria-label="Deixe uma mensagem"
+                                    ></textarea>
+                                </label>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn-outline-purple" type="submit">
+                                    <span class="btn-background"></span> 
+                                    Enviar
+                                </button>
+                            </div>
+                            
+                        </form>
+                    <!-- </div> -->
+                    <div class="col-md-5 order-md-1 p-3 contact-info__container">
+                        <p class="section__subtitle">Informações</p>
+                        <ul class="contact-icons__container">
+                            <li>
+                                <a class="contact-icon__link" href="https://www.linkedin.com/in/guilherme-shibuya-99692b217/">
+                                    <i class="uil uil-linkedin"></i> Guilherme Shibuya
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-icon__link" href="https://github.com/guilhermeshibuya">
+                                    <i class="uil uil-github"></i> guilhermeshibuya
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-icon__link" href="">
+                                    <i class="uil uil-phone"></i> +55 (66) 99223-9111
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-icon__link" href="">
+                                    <i class="uil uil-envelope"></i> contato.guishibuya@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                        <img class="img-fluid" src="./images/undraw_contact_us_re_4qqt.svg" alt="Desenho simples de uma pessoa segurando um envelope e no fundo um smartphone e um telefone">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <script src="js/script.js"></script>

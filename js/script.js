@@ -54,6 +54,13 @@ const navLogo = document.getElementById("nav-logo");
 //section title
 const sectionTitles = document.querySelectorAll(".section__title");
 
+// INPUTS
+const inputs = document.querySelectorAll(".input-control");
+const labels = document.querySelectorAll('.form-label');
+
+//Contact form
+const contactForm = document.getElementById("contact-form");
+
 btnDarkMode.addEventListener("click", () => {
     btnDarkModeContainer.classList.toggle("lightiest-background");
     ball.classList.toggle("dark-background");
@@ -71,4 +78,8 @@ btnDarkMode.addEventListener("click", () => {
     navLogo.classList.toggle("lighter-font");
     navLinks.forEach(link => link.classList.toggle("lighter-font"));
 
+    inputs.forEach(input => input.classList.toggle("input-control-dark"));
+    labels.forEach(label => label.classList.toggle("form-label-dark"));
+
+    contactForm.classList.toggle("contact-dark");
 });
