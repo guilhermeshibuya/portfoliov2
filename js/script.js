@@ -25,16 +25,27 @@ const navHide = () => {
 
 navLinks.forEach(link => link.addEventListener("click", navHide));
 
-// Scroll header mobile
+// Scroll header mobile and button scroll top
 const header = document.getElementById("header");
+const btnScrollTop = document.getElementById("btn-scroll-top");
+const btnScrollTopContainer = document.getElementById("btn-scroll-top__container");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 15) {
+    if (window.scrollY > 20) {
         header.classList.add("nav-scroll");
+        btnScrollTopContainer.style.display = "block";
+        btnScrollTopContainer.style.overflow = "visible"
     } else {
         header.classList.remove("nav-scroll");
+        btnScrollTopContainer.style.display = "none";
+        btnScrollTopContainer.style.overflow = "hidden"
     }
 });
+
+btnScrollTop.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+})
 
 // DARK MODE
 
