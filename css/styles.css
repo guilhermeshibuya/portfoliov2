@@ -162,7 +162,7 @@ a {
 
 .btn-scroll-top__container {
     position: fixed;
-    bottom: 1rem;
+    bottom: 4.5rem;
     right: 1rem;
 }
 
@@ -172,6 +172,13 @@ a {
     width: 3rem;
     height: 3rem;
     padding: 0;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .3);
+}
+
+@media screen and (min-width: 768px) {
+    .btn-scroll-top__container {
+        bottom: 1rem;
+    }
 }
 
 /* HEADER SCROLL */
